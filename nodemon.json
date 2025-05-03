@@ -1,0 +1,11 @@
+{
+    "execMap": {
+        "ts": "tsc && node dist/index.js"
+    },
+    "ignore": [
+        "dist/*",
+        "frontend/*",
+        "crawledData.json"
+    ],
+    "ext": "ts,json"
+}
