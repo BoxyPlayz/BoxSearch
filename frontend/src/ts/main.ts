@@ -1,5 +1,5 @@
 import axios from 'axios'
-import '../scss/styles.scss'
+import('../scss/styles.scss');
 
 const urlsElement = document.getElementById("urls") as HTMLDivElement;
 const searchBar = document.getElementById("search-bar") as HTMLInputElement;

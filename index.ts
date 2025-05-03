@@ -7,6 +7,7 @@ import { Server } from "http";
 import * as cheerio from "cheerio";
 import path from "path";
 import "dotenv/config";
+import compression from "compression";
 
 const startUrls: string[] = JSON.parse(process.env.startUrl || "[]");
 
@@ -115,6 +116,9 @@ const app = express();
 app.use(cors());
 app.use(morgan(":method :url :status"));
 app.use(express.json());
+app.use(compression({
+  level: 5
+}))
 
 app.get("/api/AllData", async (req, res) => {
   if (crawled_data.length < 1) await urls;
